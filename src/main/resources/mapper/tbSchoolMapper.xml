@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.ownframe.dao.tbSchoolMapper">
+
+    <resultMap id="PackingDemandListResult" type="com.example.ownframe.entity.dto.TbSchool">
+        <result property="ID" column="ID"/>
+        <result property="stuName" column="stuName"/>
+        <result property="stuAge" column="stuAge"/>
+    </resultMap>
+
+
+    <select id="getAllData" resultType="com.example.ownframe.entity.dto.TbSchool">
+        select * from tb_school order by stuAge desc
+    </select>
+</mapper>
